@@ -1,38 +1,33 @@
-# Artificial Neural Networks (ANN) 🧠
+# Gaming Addiction Neural Network Model 🧠🎮
 
-This folder contains introductory scripts and Jupyter Notebooks demonstrating foundational concepts of Artificial Neural Networks from scratch.
+This project houses an Artificial Neural Network (ANN) built to predict gaming addiction risk levels based on various behavioral and mental health metrics. It includes a complete machine learning pipeline from data preprocessing to model evaluation.
 
 ## Project Structure 📁
-- **`sec1.py`:** An introductory Python script for neural network implementations.
-- **`sec3.ipynb`:** Jupyter Notebook detailing core ANN mathematical components:
-  - Error Calculations: Mean Squared Error (MSE)
-  - Activation Functions: Sigmoid, ReLU, Perceptron step functions.
-  - Forward Propagation step calculations.
-  - Derivative calculations for backpropagation.
-- **`sec4.ipynb`:** Additional Jupyter Notebook exploring further concepts and implementations in basic neural network theory.
+- **`ANN.ipynb`:** The core Jupyter Notebook containing the data analysis, data scaling, categorical encoding, model architecture definition, and training loops using Deep Learning.
+- **`Gaming and Mental Health.csv`:** The dataset containing metrics such as primary game played, gaming patterns, and related mental health outcomes.
 
-## Key Concepts Covered 📚
-- **Activation Functions:** Understanding how nonlinearities are applied to linear combinations of inputs.
-- **Loss Functions:** Setting up `MeanSquareError` to evaluate model performance numerically.
-- **Matrix Operations:** Implementing weights and biases using NumPy linear algebra functions (`X @ W + b`).
-- **Derivatives:** Implementation of Sigmoid derivatives to understand gradients.
+## Key Features & Techniques ⚙️
+- **Data Preprocessing:** Utilizes `StandardScaler` for continuous features and One-Hot Encoding (`get_dummies`) alongside `LabelEncoder` for categorical alignment.
+- **Neural Network Architecture:** Uses `MLPClassifier` with customized hyperparameters (e.g., hidden layers, sigmoid or ReLU activations) designed to classify varying risk levels.
+- **Performance Evaluation:** Validates the model utilizing hold-out test sets to generate robust accuracy, precision, recall, F1 scores, and Confusion Matrices.
+- **Hyperparameter Tuning:** Involves strategies like `GridSearchCV` to locate optimal node sizes and learning paths.
 
-## How to Follow Along 💻
+## Getting Started 🚀
 1. Clone this repository:
    ```bash
    git clone https://github.com/BassemRamdan/ANN.git
-   ```
-2. Navigate to the downloaded directory:
-   ```bash
    cd ANN
    ```
-3. Open up your Jupyter environment:
+2. Boot up Jupyter:
    ```bash
    jupyter notebook
    ```
-4. Select `sec3.ipynb` or `sec4.ipynb` and step through the cells!
+3. Open `ANN.ipynb` and run all cells to evaluate the predictions against the bundled dataset.
 
 ## Requirements 🛠️
-You just need python and basic data science tools:
+Ensure the following packages are installed:
 - `python` 3.x
+- `pandas`
 - `numpy`
+- `scikit-learn`
+- `matplotlib` / `seaborn` (for visualization of the confusion metrics)
